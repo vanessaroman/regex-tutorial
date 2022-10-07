@@ -67,7 +67,28 @@ We can see that in "([ \ / \ w \ .-]* ) * \ / ?" * is matching zero or more of t
 
 ### OR Operator
 
+OR Operators " | " match characters or expression to either left or right of the |.
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We can see there are no OR operators in the string.
+
 ### Character Classes
+
+A character class or character set is denoted by [] will help match whatever characters or expressions are inside the []. The order of the characters inside does not matter.
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We can see the following character sets:
+
+* [\ d a-z \ . -]
+* [ a - z \ . ]
+* [ \ / \ w \ . -]
+
 
 ### Flags
 
