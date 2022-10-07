@@ -89,10 +89,32 @@ We can see the following character sets:
 * [ a - z \ . ]
 * [ \ / \ w \ . -]
 
-
 ### Flags
 
+Flags change the search behavior of a Regex. They are denoted with single lowercase alphabetical characters. Flags are placed after the closing slash in an full regex. A list of flags used for Regex is found below:
+
+* i - Ignore casing
+* g - Global
+* s - DotAll
+* m - Multiline
+* y - Sticky
+* u - Unicode
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+we can see there are no flags in our string.
+
 ### Grouping and Capturing
+
+Parenthesis are used for grouping characters that are part of a Regex together. When parenthesis group multiple tokens together that is referred to as capturing.
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We can see the fallowing groups: "(h t t p s ? : \ / \ / )" , "( [ \ d a - z \ . - ] + )" group capturing , "( [ a - z \ . ] { 2 , 6 } )" group capturing, "( [ \ / \ w  \ . - ] * )" group capturing.
 
 ### Bracket Expressions
 
