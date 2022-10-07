@@ -47,7 +47,7 @@ Quantifiers help set a character limit for groups or full strings. They can help
 - "?" matches zero or more times
 - "{n}" matches exactly n times
 - "{n,}" matches at least n times
-- "{n, m}" matches n to m times 
+- "{n,m}" matches n to m times 
 
 Looking at our Regex below, 
 
@@ -57,6 +57,13 @@ We can see that ? is trying to match a combination of characters that starts wit
 
 We can see that ? is trying to match any grouping that matches https:// zero or one times.
 
+We can see that + is matching one or more of the character set that matches any digit character between a and z followed by a literal period and a - 
+
+We can see that {2,6} is matching between 2 to 6 occurrences of a string that contains any lowercase letter between a–z followed by a literal period.
+
+We can see that in "([ \ / \w \ .-]*)" * is matching zero or more of the preceding set.
+
+We can see that in "([ \ / \ w \ .-]* ) * \ / ?" * is matching zero or more of the preceding capturing set and ? is matching anywhere from 0 to 1 of the preceding /.
 
 ### OR Operator
 
