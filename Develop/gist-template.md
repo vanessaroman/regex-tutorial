@@ -1,10 +1,16 @@
-# Title (replace with your title)
+# Matching URL Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+Welcome to my Regex tutorial! In this tutorial you will learn how to use a Regular Expression to find/match URLs within code.
+
+Just fyi, Regular Expressions are a series of characters that define a search pattern.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The Regex we will learn about is the following:
+
+    ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+This Regex will help us search for specific strings in code that match the specifications of a URL.
 
 ## Table of Contents
 
@@ -23,6 +29,11 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
+
+Anchors help Regular Expressions match a certain position before, after, or en between characters. The character ^ helps match with a string that begins with whatever character follows it. The character $ helps match strings that end with whatever character that is in front of it.
+
+Looking at our Regex below, 
+
 
 ### Quantifiers
 
