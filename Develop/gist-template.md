@@ -118,14 +118,59 @@ We can see the fallowing groups: "(h t t p s ? : \ / \ / )" , "( [ \ d a - z \ .
 
 ### Bracket Expressions
 
+Bracket Expressions define any individual characters to match.
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We see the following bracket expressions: "[ \ d a - z \ . - ]", "[ a - z \ . ]", and "[ \ / \ w \ . - ]"
+
 ### Greedy and Lazy Match
+
+Greedy matches will try to match as much as possible. By having a regex like <.+>, and code like < e m >Hello World< / e m > we might assume the regex will only match the < e m > < / e m > tags, but in truth it will match from the first < to the last >, including the plain text in between.
+
+Lazy matches tell the Regex to look for as little as possible. In our example above, adding a ? to our Regex like so: < . + ? >, will communicate that we want as few matches as possible and as soon as it reads the first > it will stop.
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We see ? quantifier telling our Regex to look for zero to one matches of "( h t t p s ? : \ / \ / )" and "/" towards the end of the Regex.
 
 ### Boundaries
 
+\b boundaries help searches define what can be matched to the left and right of the current position. \b is a word boundary that matches strings where one side is a word character and the other side is not.
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We can see there are no word boundaries.
+
+
 ### Back-references
+
+Back-references match the same text already matched by a capturing group.When looking at a Regex with multiple capturing groups we can tell it to re-match a capturing group by adding \n to the Regex. The n will be defined by the position of the capturing group wanted.
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We can see there are no back-references, but as an example, if we wanted to re-match the second capturing group we can add \2 to the Regex.
 
 ### Look-ahead and Look-behind
 
+Collectively called "lookaround" are added at the start and end of line and word expressions. Lookarounds look for matches but do not bring them up, they just make an assertion about whether or not there is a match. Below is a list of the different lookarounds available.
+
+* (?=foo) - look ahead
+* (?<=foo) - look behind
+* (?!foo) - negative look ahead
+* (?<!foo) - negative look behind
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Vanessa is a full-stack software developer and artist living in Colorado. 
+
+[Vanessa's Github](https://github.com/vanessaroman)
+
