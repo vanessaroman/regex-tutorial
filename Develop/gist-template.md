@@ -8,7 +8,7 @@ Just fyi, Regular Expressions are a series of characters that define a search pa
 
 The Regex we will learn about is the following:
 
-    ^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+    /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 
 This Regex will help us search for specific strings in code that match the specifications of a URL.
 
@@ -34,8 +34,29 @@ Anchors help Regular Expressions match a certain position before, after, or en b
 
 Looking at our Regex below, 
 
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We can see that ^ is specifying the Regex to find any string that starts with the group (denoted by "()") (https?:\/\/). And we see that $ is telling our Regex to match any strings that end with a question mark.
 
 ### Quantifiers
+
+Quantifiers help set a character limit for groups or full strings. They can help match a minimun and maximun amount of characters, a specific number of characters, or a minimun number of characters. See a list below of all the different quantifiers.
+
+- "*" matches zero or more times
+- "+" matches one or more times
+- "?" matches zero or more times
+- "{n}" matches exactly n times
+- "{n,}" matches at least n times
+- "{n, m}" matches n to m times 
+
+Looking at our Regex below, 
+
+      /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+
+We can see that ? is trying to match a combination of characters that starts with p followed by zero or one instance of the letter s. 
+
+We can see that ? is trying to match any grouping that matches https:// zero or one times.
+
 
 ### OR Operator
 
